@@ -1,6 +1,6 @@
 [project]
 name = "debounce"
-version = "0.1.0"
+version = "0.1.1"
 description = "Debounce and throttle helpers with leading and trailing options."
 requires-python = ">=3.10"
 dependencies = []
