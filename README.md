@@ -36,3 +36,10 @@ raises `ValueError`, since it would never call anything. `debounce(leading=False
 does not raise but never fires; it is allowed for completeness but useless.
 
 The wrappers are not thread-safe; they are designed for single-threaded event loops.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
